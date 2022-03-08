@@ -1,0 +1,4 @@
+#Get Ip addresses for all aws regions
+Get-AWSPublicIpAddressRange| where {$_.IpAddressFormat -eq "Ipv4"} | select IpPrefix
+#Get ip addresses in a specific region
+#Get-AWSPublicIpAddressRange -Region us-east-1| where {$_.IpAddressFormat -eq "Ipv4"} | select IpPrefix
